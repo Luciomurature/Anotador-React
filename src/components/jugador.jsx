@@ -15,6 +15,7 @@ class Jugador extends Component {
 
   handleChange = e => {
     console.log(e.target.value);
+    if (isNaN(e.target.value)) { return;}
     this.setState({
       puntosAgregar: parseInt(e.target.value)
     });
@@ -45,7 +46,7 @@ class Jugador extends Component {
         </h3>
         <span
           style={{ fontSize: 20 }}
-          className="badge m-1 badge badge-info "
+          className="badge m-1 badge badge-dark "
         >
           {this.state.puntos} Puntos
             </span>
@@ -54,13 +55,13 @@ class Jugador extends Component {
           <label>
             <input
               style={{ width: 50, height: 30 }}
-              type="text"
+              type="tel"
               onChange={this.handleChange}
               name="agrega"
             ></input>
           </label>
           <label>
-<button onClick={this.handlePuntos} className="btn btn-info m-2">+</button>
+<button onClick={this.handlePuntos} className="btn btn-dark m-2">+</button>
 
           </label>
         </form>

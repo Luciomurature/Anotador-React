@@ -35,7 +35,7 @@ class Jugadores extends Component {
           />
         ))}
         <button
-          className="btn btn-primary btn-bg m-3"
+          className="btn btn-dark btn-bg m-3"
           onClick={this.nuevoJugador}
         >
           Nuevo jugador
