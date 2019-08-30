@@ -69,7 +69,7 @@ class Jugador extends Component {
         <div>
           <button
             className="btn btn-danger btn-bg"
-            onClick={() => this.props.onDelete(this.props.id)}
+            onClick={() => { if (window.confirm('¿Estas seguro que deseas eliminar el jugador?')) { this.props.onDelete(this.props.id) } }}
           >
             Eliminar
           </button>
