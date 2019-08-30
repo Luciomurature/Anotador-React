@@ -55,7 +55,7 @@ class Jugador extends Component {
           <label>
             <input
               style={{ width: 50, height: 30 }}
-              type="tel"
+              type="number"
               onChange={this.handleChange}
               name="agrega"
             ></input>
