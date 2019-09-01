@@ -7,7 +7,7 @@ class Jugador extends Component {
       nombre: "Jugador",
       puntos: 0,
       puntosAgregar: 0,
-      limite: 100
+      limite: 300
     };
 
     this.handleChange = this.handleChange.bind(this);
