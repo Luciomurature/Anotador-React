@@ -47,7 +47,7 @@ class Jugador extends Component {
   render() {
     this.handleLimit();
     return (
-      <div className="container" style={{ textAlign: "center" }}>
+      <div className="container">
         <h3>
           <span className="badge badge badge-dark m-3">
             {this.state.nombre}
