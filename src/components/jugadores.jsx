@@ -26,7 +26,7 @@ class Jugadores extends Component {
 
   render() {
     return (
-      <div style={{backgroundColor: 'lightgrey', textAlign:'center'}} className="container">
+      <div className="container">
         {this.state.jugadores.map(jugador => (
           <Jugador
             onDelete={this.handleDelete}
