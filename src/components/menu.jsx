@@ -14,9 +14,9 @@ class Menu extends Component {
     const display =
       this.state.isPlaying === 0 ? (
             <div>
-                <h1 className="display-4">Anotador</h1>
-                <div className="alert alert-secondary" role="alert">
-                    Anotador creado con la libreria React.js creada por Facebook.
+                <h1 className="display-4" style={{color: 'white'}}>Anotador</h1>
+                <div style={{color: 'white'}}>
+                    Creado por Lucio Murature con la libreria React.js desarrollada por Facebook.
 </div>
           <button onClick={this.start} className="btn btn-dark m-2">
             Let's Go!

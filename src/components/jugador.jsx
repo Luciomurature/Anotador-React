@@ -35,6 +35,8 @@ class Jugador extends Component {
     this.setState({
       puntos: parseInt(this.state.puntos) + parseInt(this.state.puntosAgregar)
     });
+    this.refs.clearInput.value = '';
+    this.setState({ puntosAgregar: 0 });
   };
 
   componentDidMount() {
@@ -64,6 +66,7 @@ class Jugador extends Component {
               type="number"
               onChange={this.handleChange}
               name="agrega"
+              ref="clearInput"
             ></input>
           </label>
           <label>
@@ -78,7 +81,7 @@ class Jugador extends Component {
             className="btn btn-danger btn-bg"
             onClick={() => {
               if (
-                window.confirm("¿Estas seguro que deseas eliminar el jugador?")
+                window.confirm("¿Estas seguro que deseas eliminar a este jugador?")
               ) {
                 this.props.onDelete(this.props.id);
               }
