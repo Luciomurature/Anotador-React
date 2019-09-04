@@ -5,7 +5,7 @@ class Jugador extends Component {
     super(props);
     this.state = {
       puntos: 0,
-      puntosAgregar: 0,
+      puntosAgregar: 0
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -23,7 +23,7 @@ class Jugador extends Component {
 
   handleLimit = () => {
     if (parseInt(this.state.puntos) > parseInt(this.props.limite)) {
-      alert( this.props.nombre + " perdio.");
+      alert(this.props.nombre + " perdio.");
       this.props.onDelete(this.props.id);
     }
   };
@@ -49,12 +49,9 @@ class Jugador extends Component {
   render() {
     this.handleLimit();
     return (
-      <div className="container" style={{color: 'white'}}>
-        <h2>
-            {this.props.nombre}
-
-        </h2>
-        <span style={{ fontSize: 20 }} className="badge m-1 badge badge-dark ">
+      <div className="container" style={{ color: "white" }}>
+        <h2>{this.props.nombre}</h2>
+        <span style={{ fontSize: 20, borderRadius: '10px' }} className="badge m-1 badge badge-dark ">
           {this.state.puntos} Puntos
         </span>
 
@@ -69,7 +66,8 @@ class Jugador extends Component {
             ></input>
           </label>
           <label>
-            <button onClick={this.handlePuntos} className="btn btn-dark m-2">
+            <button onClick={this.handlePuntos} style={{ borderRadius: "10px" }}
+ className="btn btn-dark m-2">
               +
             </button>
           </label>
@@ -77,6 +75,7 @@ class Jugador extends Component {
 
         <div>
           <button
+            style={{ borderRadius: "20px" }}
             className="btn btn-danger btn-bg"
             onClick={() => {
               if (

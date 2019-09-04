@@ -47,8 +47,9 @@ class Jugadores extends Component {
         <form onSubmit={this.nuevoJugador}>
           <label>
             <input
-              className="m-2"
-              type="text"
+              style={{ borderRadius: '10px'}}
+            className="m-2"
+            type="text"
               value={this.nombreAgregar}
               onChange={this.handleNew}
               ref="clearInput"
@@ -56,7 +57,8 @@ class Jugadores extends Component {
           </label>
         </form>
 
-        <button
+        <button style={{ borderRadius: '20px' }}
+
           className="btn btn-success btn-bg m-2"
           onClick={this.nuevoJugador}
         >

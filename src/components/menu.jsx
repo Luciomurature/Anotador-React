@@ -31,8 +31,8 @@ class Menu extends Component {
           <form onSubmit={this.start}>
             <label>
               <div style={{color: 'white'}}>Límite de puntuación</div>
-              <input
-                style={{ width: 50, height: 30 }}
+                <input
+                style={{ width: 50, height: 30 , borderRadius: '7px'}}
                 type="number"
                 value={this.state.limite}
                 onChange={this.handleLimit}
