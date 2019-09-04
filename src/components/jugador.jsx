@@ -49,12 +49,11 @@ class Jugador extends Component {
   render() {
     this.handleLimit();
     return (
-      <div className="container">
-        <h3>
-          <span className="badge badge badge-dark m-3">
+      <div className="container" style={{color: 'white'}}>
+        <h2>
             {this.props.nombre}
-          </span>
-        </h3>
+
+        </h2>
         <span style={{ fontSize: 20 }} className="badge m-1 badge badge-dark ">
           {this.state.puntos} Puntos
         </span>
