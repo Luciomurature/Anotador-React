@@ -4,7 +4,7 @@ import Jugadores from "./jugadores";
 class Menu extends Component {
   state = {
     isPlaying: 0,
-    limite: 0
+    limite: 100
   };
 
   start = () => {
@@ -30,9 +30,9 @@ class Menu extends Component {
           <div>
           <form onSubmit={this.start}>
             <label>
-              <div style={{color: 'white'}}>Límite de puntuación</div>
+                <div style={{ color: 'white' }}><h4 >Límite de puntuación</h4></div>
                 <input
-                style={{ width: 50, height: 30 , borderRadius: '7px'}}
+                style={{ width: 80, height: 50 , borderRadius: '7px', fontSize:'150%'}}
                 type="number"
                 value={this.state.limite}
                 onChange={this.handleLimit}
@@ -42,7 +42,7 @@ class Menu extends Component {
             </form>
           </div>
           <button onClick={this.start} className="btn btn-dark m-2">
-            Let's Go!
+            Empezar con límite {this.state.limite}
           </button>
         </div>
       ) : (
@@ -53,7 +53,7 @@ class Menu extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }} className="container">
+      <div style={{textAlign: 'center'}} className="container">
         {this.renderPlayers()}
       </div>
     );
