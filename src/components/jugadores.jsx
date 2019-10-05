@@ -6,7 +6,7 @@ class Jugadores extends Component {
     super(props);
     this.state = {
       jugadores: [],
-      nombreAgregar: ""
+      nombreAgregar: "",
     };
   }
 
@@ -23,8 +23,9 @@ class Jugadores extends Component {
       jugadores.length === 0 ? 0 : jugadores[jugadores.length - 1].id + 1;
     newPlayer.nombre = this.state.nombreAgregar;
     jugadores.push(newPlayer);
-    this.setState({ jugadores: jugadores });
+    this.setState({ jugadores: jugadores, nombreAgregar: '' });
     this.refs.clearInput.value = "";
+    
   };
 
   handleNew = (e) => {
@@ -32,9 +33,13 @@ class Jugadores extends Component {
     this.setState({ nombreAgregar: e.target.value });
   };
 
+
   render() {
     return (
-      <div className="container">
+      <div className="container"  >
+        <h3 style={{color: 'white'}} className="display-4">Jugadorxs</h3>
+
+
         {this.state.jugadores.map(jugador => (
           <Jugador
             limite={this.props.limite}
@@ -47,22 +52,23 @@ class Jugadores extends Component {
         <form onSubmit={this.nuevoJugador}>
           <label>
             <input
-              style={{ borderRadius: '10px'}}
+              style={{ borderRadius: '2px'}}
             className="m-2"
             type="text"
               value={this.nombreAgregar}
               onChange={this.handleNew}
               ref="clearInput"
+              placeholder="Nombre"
             ></input>
           </label>
         </form>
 
-        <button style={{ borderRadius: '20px' }}
+        <button style={{ borderRadius: '10px' }}
 
           className="btn btn-success btn-bg m-2"
           onClick={this.nuevoJugador}
         >
-          Agregar
+          Agregar a {this.state.nombreAgregar}
         </button>
       </div>
     );
